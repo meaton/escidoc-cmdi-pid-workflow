@@ -217,7 +217,7 @@
                             </xsl:for-each>
                             
                              <cmd:imprint>
-                                <cmd:publisher >
+                                <cmd:publisher>
                                     <xsl:value-of select="cmd:olac/cmd:publisher"/>
                                 </cmd:publisher>
                                 <xsl:variable name="date" select="cmd:olac/cmd:issued"/>
