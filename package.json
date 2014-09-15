@@ -3,14 +3,17 @@
   "version": "0.1.5",
   "description": "Workflow to create new CMDI md record and assign PIDs to existing resources in clarin.dk",
   "main": "./workflow.js",
-  "bin": { "escidoc-cmdi-pid-workflow": "bin/start" },
+  "bin": {
+    "escidoc-cmdi-pid-workflow": "bin/start"
+  },
   "dependencies": {
     "libxmljs": "~0.8.1",
     "libxsltjs": "~0.1.2",
     "utile": "~0.2.0",
     "byline": "~2.1.1",
     "kue": "~0.6.2",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "dateformat": "^1.0.7-1.2.3"
   },
   "devDependencies": {},
   "scripts": {
