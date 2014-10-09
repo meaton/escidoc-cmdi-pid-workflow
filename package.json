@@ -1,6 +1,6 @@
 {
   "name": "escidoc-cmdi-pid-workflow",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Workflow to create new CMDI md record and assign PIDs to existing resources in clarin.dk",
   "main": "./workflow.js",
   "bin": {
