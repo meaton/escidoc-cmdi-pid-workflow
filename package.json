@@ -7,7 +7,6 @@
     "escidoc-cmdi-pid-workflow": "bin/start"
   },
   "dependencies": {
-    "libxmljs": "~0.16.0",
     "libxslt": "^0.5.0",
     "utile": "~0.2.0",
     "byline": "~2.1.1",
