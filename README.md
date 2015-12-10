@@ -1,6 +1,6 @@
 Deps:
 
-Node.js >0.8.x - 0.10.x (including latest NPM) 
+Node.js >0.8.x - 0.12.x (including latest NPM) 
 - http://nodejs.org/download/
 
 Linux packages installed (Ubuntu):
