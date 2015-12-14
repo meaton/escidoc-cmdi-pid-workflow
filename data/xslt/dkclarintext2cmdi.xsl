@@ -393,7 +393,9 @@
             <xsl:for-each select="cmd:DKCLARIN-text/cmd:catRef">
               <xsl:variable name="myClassification" select="@scheme" />
               <xsl:variable name="myValue" select="@target" />
-              <cmd:catRef scheme="{$myClassification}" target="{$myValue}" />
+              <xsl:if test="$myClassification != 'nil'">
+                <cmd:catRef target="{$myValue}" scheme="{$myClassification}" />
+              </xsl:if>
             </xsl:for-each>
             <xsl:variable name="theirClassification" select="cmd:DKCLARIN-text/cmd:classCode" />
             <xsl:for-each select="cmd:olac/cmd:subject">
@@ -408,7 +410,13 @@
               <xsl:variable name="scheme" select="@scheme" />
               <xsl:variable name="classCode" select="text()" />
               <xsl:if test="$classCode != '99999999'">
-                <cmd:classCode scheme="{$scheme}">
+                <cmd:classCode>
+                  <!-- scheme valid when not nil value -->
+                  <xsl:if test="$scheme != 'nil'">
+                    <xsl:attribute name="scheme">
+                      <xsl:value-of select="$scheme" />
+                    </xsl:attribute>
+                  </xsl:if>
                   <xsl:value-of select="$classCode" />
                 </cmd:classCode>
               </xsl:if>
