@@ -266,11 +266,11 @@
                   </xsl:for-each>
                   <xsl:variable name="dateCert">
                     <xsl:choose>
-                      <xsl:when test="cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty/text() != ''">
-                        <xsl:value-of select="cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty" />
+                      <xsl:when test="not(cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty)">
+                        <xsl:text>high</xsl:text>
                       </xsl:when>
                       <xsl:otherwise>
-                        <xsl:text>high</xsl:text>
+                        <xsl:value-of select="cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty" />
                       </xsl:otherwise>
                     </xsl:choose>
                   </xsl:variable>
@@ -332,11 +332,11 @@
           <cmd:creation>
             <xsl:variable name="dateCert">
               <xsl:choose>
-                <xsl:when test="cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty/text() != ''">
-                  <xsl:value-of select="cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty" />
+                <xsl:when test="not(cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty)">
+                  <xsl:text>high</xsl:text>
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:text>high</xsl:text>
+                  <xsl:value-of select="cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty" />
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:variable>
