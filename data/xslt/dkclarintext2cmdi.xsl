@@ -323,7 +323,9 @@
           <cmd:creation>
             <xsl:variable name="dateCert" select="cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty" />
             <xsl:variable name="dateCreation" select="cmd:olac/cmd:created" />
-            <cmd:date when="{$dateCreation}" cert="{$dateCert}" />
+            <xsl:if test="$dateCreation != ''">
+              <cmd:date when="{$dateCreation}" cert="{$dateCert}" />
+            </xsl:if>
           </cmd:creation>
           <cmd:langUsage>
             <xsl:variable name="lang" select="cmd:olac/cmd:language" />
