@@ -264,7 +264,16 @@
                       <xsl:value-of select="text()" />
                     </cmd:publisher>
                   </xsl:for-each>
-                  <xsl:variable name="dateCert" select="cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty" />
+                  <xsl:variable name="dateCert">
+                    <xsl:choose>
+                      <xsl:when test="cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty/text() != ''">
+                        <xsl:value-of select="cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty" />
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:text>high</xsl:text>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </xsl:variable>
                   <xsl:variable name="date" select="cmd:DKCLARIN-imprint/cmd:publicationDate" />
                   <!-- MS handle illegal date values -->
                   <xsl:variable name="dateLen" select="string-length(normalize-space($date))" />
@@ -321,7 +330,16 @@
         </cmd:encodingDesc>
         <cmd:profileDesc>
           <cmd:creation>
-            <xsl:variable name="dateCert" select="cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty" />
+            <xsl:variable name="dateCert">
+              <xsl:choose>
+                <xsl:when test="cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty/text() != ''">
+                  <xsl:value-of select="cmd:DKCLARIN-dkclarin/cmd:creationDateCertainty" />
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:text>high</xsl:text>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
             <xsl:variable name="dateCreation" select="cmd:olac/cmd:created" />
             <xsl:if test="$dateCreation != ''">
               <cmd:date when="{$dateCreation}" cert="{$dateCert}" />
