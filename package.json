@@ -9,7 +9,7 @@
   "dependencies": {
     "libxslt": "^0.6.0",
     "utile": "~0.3.0",
-    "byline": "~2.1.1",
+    "byline": "~4.2.x",
     "kue": "~0.10.x",
     "underscore": "~1.8.3",
     "dateformat": "^1.0.7-1.2.3",
