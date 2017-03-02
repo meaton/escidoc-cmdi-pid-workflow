@@ -14,7 +14,7 @@ module.exports = { ns_obj: {'sru-zr':'http://www.loc.gov/zing/srw/',
 		xslt_params: [],
 		xslt_removeNamespace: './data/xslt/remove-namespace.xsl',
 		xslt_filepath: './data/xslt/dkclarinanno2cmdi.xsl',
-		xsd_filepath: './data/xsd/teiHeader.current.xsd', //TEI 
+		xsd_filepath: './data/xsd/teiHeader.xsd', //TEI 
 		clarin_schema_url: 'http://www.clarin.eu/cmd/',
 		dkclarin_cmd_profile: 'clarin.eu:cr1:p_1380106710826', //TEI
 		dkclarin_cmd_schema_url: 'http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1380106710826/xsd', //TEI
@@ -37,7 +37,7 @@ module.exports = { ns_obj: {'sru-zr':'http://www.loc.gov/zing/srw/',
 		target_mdrecord_name: 'CMD', // CMD (TEI and DATA)
 		target_tei_keywords_xpath: '//escidocMetadataRecords:md-record[@name=\"TEI\"]/t:teiHeader/t:profileDesc/t:textClass/t:keywords', // start TEI custom mods post-transform
 		target_tei_monogr_title_xpath: '//escidocMetadataRecords:md-record[@name=\"TEI\"]/t:teiHeader/t:fileDesc/t:sourceDesc/t:biblStruct/t:monogr/t:title',
-		target_tei_analytic_title_xpath: '//escidocMetadataRecords:md-record[@name=\"TEI\"]/t:teiHeader/t:fileDesc/t:sourceDesc/t:biblStruct/t:analytic/t:title',	
+		target_tei_analytic_title_xpath: '//escidocMetadataRecords:md-record[@name=\"TEI\"]/t:teiHeader/t:fileDesc/t:sourceDesc/t:biblStruct/t:analytic/t:title',
 		target_tei_notesStmt_note_attr: '//escidocMetadataRecords:md-record[@name=\"TEI\"]/t:teiHeader/t:fileDesc/t:notesStmt/t:note[@resp]',
 		target_tei_idno_uri: '//escidocMetadataRecords:md-record[@name=\"TEI\"]/t:teiHeader/t:fileDesc/t:sourceDesc/t:biblStruct/t:idno[@type=\"url\"]',
 		target_cmdi_textClass_xpath: '/CMD/Components/teiHeader/profileDesc/textClass',
@@ -50,6 +50,5 @@ module.exports = { ns_obj: {'sru-zr':'http://www.loc.gov/zing/srw/',
 		target_tei_anno_appl_xpath: '//escidocMetadataRecords:md-record[@name=\"TEI\"]/t:teiHeader/t:encodingDesc/t:appInfo/t:application',
     target_cmdi_encoding_desc_xpath: '/CMD/Components/teiHeader/encodingDesc',
     target_tei_revision_desc_xpath: '//escidocMetadataRecords:md-record[@name=\"TEI\"]/t:teiHeader/t:revisionDesc',
-		update_comment: 'MS. New CMDI md-record created for TEI annotation and assigned PIDs to new version.'	
+		update_comment: 'MS. New CMDI md-record created for TEI annotation and assigned PIDs to new version.'
 };
-

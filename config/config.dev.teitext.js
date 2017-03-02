@@ -14,7 +14,7 @@ module.exports = { ns_obj: {'sru-zr':'http://www.loc.gov/zing/srw/',
 		xslt_params: [],
 		xslt_removeNamespace: './data/xslt/remove-namespace.xsl',
 		xslt_filepath: './data/xslt/dkclarintext2cmdi.xsl',
-		xsd_filepath: './data/xsd/teiHeader.current.xsd', //TEI 
+		xsd_filepath: './data/xsd/teiHeader.xsd', //TEI 
 		clarin_schema_url: 'http://www.clarin.eu/cmd/',
 		dkclarin_cmd_profile: 'clarin.eu:cr1:p_1380106710826', //TEI
 		dkclarin_cmd_schema_url: 'http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1380106710826/xsd', //TEI
