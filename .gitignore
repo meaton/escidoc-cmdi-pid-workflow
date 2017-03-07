@@ -2,6 +2,6 @@ nohup.out
 output
 output-test
 test
-data/xmllint/*
+data/xmllint
 data/xslt/old
-node_modules/
+node_modules
