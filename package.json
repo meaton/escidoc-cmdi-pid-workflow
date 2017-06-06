@@ -2,9 +2,9 @@
   "name": "escidoc-cmdi-pid-workflow",
   "version": "0.1.9",
   "description": "Workflow to create new CMDI md record and assign PIDs to existing resources in clarin.dk",
-  "main": "./workflow.js",
+  "main": "workflow.js",
   "bin": {
-    "escidoc-cmdi-pid-workflow": "bin/start"
+    "escidoc-cmdi-pid-workflow": "./bin/start"
   },
   "dependencies": {
     "libxslt": "^0.6.0",
@@ -19,9 +19,12 @@
   "devDependencies": {
   },
   "scripts": {
-    "start": "./lib/workflow.js"
+    "start": "node ./lib/workflow.js"
   },
-  "repository": "git://github/meaton/escidoc-cmdi-pid-workflow",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/meaton/escidoc-cmdi-pid-workflow.git"
+  },
   "author": "Mitchell Seaton",
   "license": "MIT"
 }
